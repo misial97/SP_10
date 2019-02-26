@@ -18,7 +18,7 @@ CREATE TABLE `pelicula` (
 
 
 insert into director(id,nombre,apellidos) values (1,'Francis Ford','Coppola'),
-  (2,'James','Cameron');
+  (2,'James','Cameron'), (3, 'Quentin', 'Tarantino'), (4, 'Christopher', 'Nolan');
 
 insert into pelicula(anio,imdb,titulo,director_id) values ('1972','http://www.imdb.com/title/tt0068646/','El Padrino',1),
   ('1974','http://www.imdb.com/title/tt0071562/','El Padrino: parte II',1),

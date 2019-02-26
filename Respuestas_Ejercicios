@@ -1,0 +1,6 @@
+
+
+Ejercicio 2a : No, solo habría que añadirlos en el script de la BBDD o en la BBDD directamente con phpMyAdmin,
+                no haría falta tocar nada del back a parte de la BBDD.
+
+Ejercicio 2b : Si se necesita tocar el back ya que se añade una nueva funcionalidad o en el index.html, se esta investigando.
