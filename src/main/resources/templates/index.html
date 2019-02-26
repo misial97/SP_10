@@ -58,6 +58,22 @@
             });
         }
 
+        // Función para añadir una película a través de la API REST
+        function borrarDirector() {
+            var formData = {};
+            formData['id'] = 'http://localhost:8080/directores/'+$('#directorId').val();
+            // Para el director hay que enviar la URI completa al objeto existente:
+            $.ajax({
+                type: "DELETE",
+                url: 'http://localhost:8080/directores/'+$('#directorId').val(),
+                dataType: 'json',
+                async: false,
+                // El objeto hay que convertirlo a texto
+                data: JSON.stringify(formData),
+                contentType: 'application/json'
+            });
+        }
+
         // Función para obtener peli por titulo
         function getPelisByTitulo() {
             var titulo = $('#titulo-form').val();
@@ -109,9 +125,17 @@
     <div id="introducir">
         <h2>Nueva peli</h2>
         <form id="nuevapeli" action="javascript:addPeli();">
-            T&iacute;tulo:&nbsp;<input name="titulo" id="titulo" type="text"/>
+            Titulo:&nbsp;<input name="titulo" id="titulo" type="text"/>
             IMDB:&nbsp;<input name="imdb" id="imdb" type="text"/>
             ID de director:&nbsp;<input name="director" id="director" type="text"/>
+            <input type="submit"/>
+        </form>
+    </div>
+
+    <div id="borrar">
+        <h2>Borrar director</h2>
+        <form id="borraDirec" action="javascript:borrarDirector();">
+            ID de director:&nbsp;<input name="director" id="directorId" type="text"/> //id se usa para sacar el valor de ese campo
             <input type="submit"/>
         </form>
     </div>
