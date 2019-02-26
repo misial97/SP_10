@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Clase simplificada que representa un director.
  * 
- * @author J. M. Colmenar
+ * @author misial
  *
  */
 @Entity
